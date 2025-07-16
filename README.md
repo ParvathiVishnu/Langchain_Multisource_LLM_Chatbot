@@ -93,16 +93,17 @@ USER_AGENT="LangChainBot/1.0"
 
 <br>
 
+
 ```mermaid
 graph TD
-    A[User Input via Streamlit] --> B[Select Source: Wiki / PDF / arXiv / Web]
+    A[User Input via Streamlit] --> B[Select Source: Wiki / PDF / arXiv / Website]
     B --> C[LangChain Document Loader]
-    C --> D[Text Splitter (Recursive)]
+    C --> D[Text Splitter (RecursiveCharacterTextSplitter)]
     D --> E[FAISS Vector DB with MiniLM Embeddings]
     E --> F[Relevant Chunks Retrieved]
     F --> G[Prompt Template Injection]
-    G --> H[TinyLlama Local Model]
-    H --> I[Answer Shown in Streamlit UI]
+    G --> H[TinyLlama-1.1B Local Model (via HuggingFacePipeline)]
+    H --> I[Answer Rendered Back to Streamlit UI]
 ```
 </details>
 
