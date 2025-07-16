@@ -87,8 +87,13 @@ LANGSMITH_PROJECT="multisource-chatbot"
 USER_AGENT="LangChainBot/1.0"
 
 ## 🧭 Architecture Overview
-<details> <summary>🧠 Click to view architecture (Mermaid)</summary>
 
+<details>
+<summary>🧠 Click to view architecture (Mermaid)</summary>
+
+<br>
+
+```mermaid
 graph TD
     A[User Input via Streamlit] --> B[Select Source: Wiki / PDF / arXiv / Web]
     B --> C[LangChain Document Loader]
@@ -98,6 +103,8 @@ graph TD
     F --> G[Prompt Template Injection]
     G --> H[TinyLlama Local Model]
     H --> I[Answer Shown in Streamlit UI]
+```
+</details>
 
 
 
