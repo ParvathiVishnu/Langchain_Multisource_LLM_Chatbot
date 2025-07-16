@@ -67,10 +67,10 @@ pip install -r chatbot/requirements.txt
 ```bash
 python chatbot/model_downloader.py
 ```
-## Downloads and caches:
+# Downloads and caches:
 
-# TinyLlama/TinyLlama-1.1B-Chat-v1.0
-# sentence-transformers/all-MiniLM-L6-v2
+TinyLlama/TinyLlama-1.1B-Chat-v1.0
+sentence-transformers/all-MiniLM-L6-v2
 
 ### 4.Run the App
 
@@ -86,17 +86,19 @@ LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
 LANGSMITH_PROJECT="multisource-chatbot"
 USER_AGENT="LangChainBot/1.0"
 
-### Architecture Diagram
+## 🧭 Architecture Overview
 
+```mermaid
 graph TD
-    A[User Input via Streamlit] --> B[Select Source: Wiki / PDF / arXiv / Web]
+    A[User Input via Streamlit] --> B[Choose Source: Wiki / PDF / arXiv / Website]
     B --> C[LangChain Document Loader]
     C --> D[Text Splitter (Recursive)]
-    D --> E[FAISS Vector DB with MiniLM Embeddings]
+    D --> E[FAISS Vector DB + MiniLM Embeddings]
     E --> F[Relevant Chunks Retrieved]
-    F --> G[Prompt Template Injection]
-    G --> H[TinyLlama Local Model]
-    H --> I[Answer Shown in Streamlit UI]
+    F --> G[Prompt Template with Context]
+    G --> H[TinyLlama Model (locally)]
+    H --> I[Answer Displayed in Streamlit UI]
+```
 
 
 ## 🧪 Example Use Cases
