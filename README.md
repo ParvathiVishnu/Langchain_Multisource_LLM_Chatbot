@@ -87,18 +87,18 @@ LANGSMITH_PROJECT="multisource-chatbot"
 USER_AGENT="LangChainBot/1.0"
 
 ## 🧭 Architecture Overview
+<details> <summary>🧠 Click to view architecture (Mermaid)</summary>
 
-```mermaid
 graph TD
-    A[User Input via Streamlit] --> B[Choose Source: Wiki / PDF / arXiv / Website]
+    A[User Input via Streamlit] --> B[Select Source: Wiki / PDF / arXiv / Web]
     B --> C[LangChain Document Loader]
     C --> D[Text Splitter (Recursive)]
-    D --> E[FAISS Vector DB + MiniLM Embeddings]
+    D --> E[FAISS Vector DB with MiniLM Embeddings]
     E --> F[Relevant Chunks Retrieved]
-    F --> G[Prompt Template with Context]
-    G --> H[TinyLlama Model (locally)]
-    H --> I[Answer Displayed in Streamlit UI]
-```
+    F --> G[Prompt Template Injection]
+    G --> H[TinyLlama Local Model]
+    H --> I[Answer Shown in Streamlit UI]
+
 
 
 ## 🧪 Example Use Cases
