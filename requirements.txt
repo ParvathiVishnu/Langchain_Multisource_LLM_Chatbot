@@ -1,0 +1,48 @@
+# Core LangChain + LLM support
+langchain
+langchain-community
+langchain-core
+langchainhub
+
+# Hugging Face transformers & sentence embeddings
+transformers>=4.40.0
+sentence-transformers>=2.7.0
+torch>=2.3.0
+
+
+# Environment management
+python-dotenv
+langsmith
+
+# UI Framework
+streamlit
+
+# API serving (optional)
+fastapi
+uvicorn
+sse_starlette
+
+# Web + file loaders
+beautifulsoup4
+bs4
+pypdf
+PyPDF2
+wikipedia
+arxiv
+validators
+PyMuPDF
+trafilatura
+
+# Vector store backends
+chromadb
+faiss-cpu  #May not work well on Windows with pip. Use Conda or WSL if issues occur.
+
+# LangSmith tracing
+langsmith
+
+# Optional: Groq or CassIO integrations (safe to ignore if not using)
+groq
+cassio
+
+# Fix common compatibility issues
+setuptools<65  # Required for chromadb on some Windows setups
