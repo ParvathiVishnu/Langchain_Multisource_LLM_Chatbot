@@ -85,6 +85,7 @@ python chatbot/model_downloader.py
 # Downloads and caches:
 
 TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
 sentence-transformers/all-MiniLM-L6-v2
 
 ### 4.Run the App
@@ -126,6 +127,18 @@ graph TD
 ```
 </details>
 
+
+## 📸 Screenshot
+
+Here is a screenshot of the output we get from multiple sources:
+
+![Wikipedia](assets/wikipedia.png)
+
+![PDF](assets/PDF.png)
+
+![ArXiv](assets/ArXiv.png)
+
+![Website](assets/Website.png)
 
 
 ## 🧪 Example Use Cases
