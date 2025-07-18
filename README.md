@@ -21,16 +21,31 @@ A fully offline, multi-source chatbot powered by local LLMs and semantic search,
 
 ---
 
-## 🗂️ Project Structure
+## 📁 Project Structure
 
-Langchain/
+```
+LANGCHAIN/
+│
 ├── chatbot/
-  ├──models/
-│ ├── app.py # Main Streamlit app
-│ ├── model_downloader.py # Downloads TinyLlama & MiniLM models
-├── requirements.txt # Python dependencies
-├── .env # (LangChain keys or tracing)
-├── venv
+│   ├── models/
+│
+├── app.py
+├── model_downloader.py
+├── temp.pdf
+│
+├── requirements.txt
+├── .env
+│
+├── venv/
+│   ├── etc/
+│   ├── Include/
+│   ├── Lib/
+│   ├── Scripts/
+│   ├── share/
+│   └── pyvenv.cfg
+├── requirements.txt
+```
+
 
 
 ---
@@ -81,9 +96,13 @@ streamlit run chatbot/app.py
 ### 5.env File
 
 LANGCHAIN_TRACING_V2=false
+
 LANGCHAIN_API_KEY=your_optional_key
+
 LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
+
 LANGSMITH_PROJECT="multisource-chatbot"
+
 USER_AGENT="LangChainBot/1.0"
 
 ## 🧭 Architecture Overview
